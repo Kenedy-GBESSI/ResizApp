@@ -20,8 +20,7 @@
            $image =  imagecreatetruecolor($rwidth,$rheight);
            $newImage = imagecreatefromjpeg($tmp_name);
            imagecopyresampled($image,$newImage,0,0,0,0,$rwidth,$rheight,$w,$h);
-           imagejpeg($image,"./images/".$new_name);
-            
+           imagejpeg($image,"./images/".$new_name);       
            if($_SESSION['unique_id']){
             $sql = mysqli_query($conn_bd,"INSERT INTO images (img_url,img_user_id) VALUES('{$new_name}',{$_SESSION['unique_id']})");
             if($sql){

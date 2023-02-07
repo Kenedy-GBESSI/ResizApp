@@ -29,7 +29,7 @@
                        ';
                    }
                  }else{
-                  $content .="<p style='text-align:center'>We have nothing !</p>";
+                  $content .="<p style='text-align:center'>We have nothing ! <a href='./resize.php'>Resize now!</a></p>";
                  }
                  echo $content
                ?>
